@@ -19,3 +19,9 @@ hamburger.addEventListener('click', function () {
   hamburger.classList.toggle('hamburger-active');
   navMenu.classList.toggle('hidden');
 });
+
+document.addEventListener('click', function (e) {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    navMenu.classList.remove('active');
+  }
+});
